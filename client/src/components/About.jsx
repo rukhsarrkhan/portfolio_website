@@ -1,36 +1,38 @@
 import React from "react";
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
+import AboutImg from "../rrk.jpg";
 
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-}));
-
-const Landing = () => {
+const About = () => {
     return (
-        <div>
-            <Grid container spacing={2}>
-                <Grid item xs={8}>
-                    <Item>xs=8</Item>
-                </Grid>
-                <Grid item xs={4}>
-                    <Item>xs=4</Item>
-                </Grid>
-                <Grid item xs={4}>
-                    <Item>xs=4</Item>
-                </Grid>
-                <Grid item xs={8}>
-                    <Item>xs=8</Item>
-                </Grid>
-            </Grid>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ flex: 1 }}>
+                <img
+                    src={AboutImg}
+                    alt="Your Alt Text"
+                    style={{ maxWidth: '400px', height: 'auto' }}
+                />
+            </div>
+            <div style={{ flex: 1, marginRight: '100px', textAlign: 'left' }}>
+                <p>
+                    Hello,
+                </p>
+                <p>
+                    I trust you are having a splendid week! Currently enrolled in a Master's program for Computer Science, with an anticipated graduation date in December 2023, I have actively engaged with subjects such as Web Programming 1 and 2. Within these courses, I have spearheaded the development of two MERN projects, skillfully utilizing technologies like React, Node, Express, MongoDB, and Redux. My pursuit of comprehensive knowledge extends to integrating AWS and various services, enriching the overall functionality and understanding of MERN applications.
+                </p>
+                <p>
+                    Prior to my master's program, I dedicated over three years as a software engineer at ConnectWise, a prominent Florida-based company. In this role, I played a pivotal part in frontend development for security projects. My proficiency encompasses React, Typescript, HTML, and CSS, with practical application of Redux and Context API. Additionally, I have adeptly employed testing methodologies using Jest, implemented optimization techniques such as lazy loading, and demonstrated expertise with tools like Yarn and Webpack.
+                </p>
+                <p>
+                    I am committed to further honing my skills and knowledge, continuously seeking opportunities for growth and exploration within the dynamic realm of software engineering.
+                </p>
+                <p>
+                    Best Regards,
+                </p>
+                <p>
+                    Rukhsar Rashid Khan
+                </p>
+            </div>
         </div>
     );
 };
 
-export default Landing;
+export default About;

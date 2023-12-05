@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Landing from "./components/Landing";
 import About from "./components/About";
-
+import Portfolio from "./components/Portfolio";
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -41,7 +41,7 @@ const Main = (props) => {
     return (
         <div>
             <CssBaseline />
-            <ElevationScroll {...props}>
+            {/* <ElevationScroll {...props}>
                 <AppBar>
                     <Toolbar>
                         <Typography variant="h6" component="div">
@@ -49,12 +49,13 @@ const Main = (props) => {
                         </Typography>
                     </Toolbar>
                 </AppBar>
-            </ElevationScroll>
-            <Toolbar />
+            </ElevationScroll> */}
+            {/* <Toolbar /> */}
             <div>
                 <Routes>
-                    <Route path="/" element={<Landing />} />
-                    <Route path="/about" element={<About />} />
+                    <Route path="/portfolio_website" element={<Landing />} />
+                    <Route path="/portfolio_website/about" element={<About />} />
+                    <Route path="/portfolio_website/portfolio" element={<Portfolio />} />
                 </Routes>
             </div>
         </div>
