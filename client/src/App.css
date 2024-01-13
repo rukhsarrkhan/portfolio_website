@@ -2,7 +2,8 @@
   text-align: center;
   background-color: rgb(231, 245, 251);
     display: grid;
-
+    font-family: "Raleway";
+    font-size: "12pt"
 }
 
 .App-logo {
@@ -25,6 +26,26 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.module-header {
+  color: #444649;
+  font-family: "raleway-bold";
+  position: relative;
+}
+
+.header-bar {
+  background: #444649;
+  height: 0.1px;
+  /* margin: 0px 0 75px 0; */
+  width: 70px;
 }
 
 .App-link {
@@ -57,7 +78,7 @@ section {
   z-index: 2;
   height: 60px;
   min-height: 60px;
-  width: calc(100% - 1.5rem);
+  /* width: calc(100% - 1.5rem); */
   background-color: #fff;
   padding: 0 1rem;
   box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
@@ -105,4 +126,15 @@ li:hover {
 #contact {
   color: #3b3b3c;
   background: #eaf2fa;
+}
+
+#tsparticles {
+  height: 100vh;
+  width: 100vw;
+}
+
+Form {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
 }

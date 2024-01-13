@@ -11,6 +11,7 @@ import PortfolioCard from "./PortfolioCard";
 import AboutCard from "./AboutCard";
 import About from "./About";
 import TimelineComp from './Timeline';
+import Contact from './Contact';
 
 export default function LabTabs() {
     const [value, setValue] = React.useState('1');
@@ -47,23 +48,30 @@ export default function LabTabs() {
                     </ul>
                 </nav>
             </header>
-            <section id="about">
-                <h1>ABOUT</h1>
+            <section className='flex' id="about">
+                <h1 className='module-header'>ABOUT</h1>
+                <h3 className='header-bar'></h3>
 
                 <About />
             </section>
-            <section id="timeline">
-                <h1>TIMELINE</h1>
+            <section className='flex' id="timeline">
+                <h1 className='module-header'>TIMELINE</h1>
+                <h3 className='header-bar'></h3>
                 <TimelineComp />
             </section>
-            <section id="projects">
-                <h1>PROJECT</h1>
+            <section className='flex' id="projects">
+                <h1 className='module-header'>PROJECT</h1>
+                <h3 className='header-bar'></h3>
 
                 <PortfolioCard />
             </section>
-            <section id="contact">
-                CONTACT ME</section>
-        </div>
+            <section className='flex' id="contact">
+                <h1 className='module-header'>CONTACT ME</h1>
+                <h3 className='header-bar'></h3>
+
+                <Contact />
+            </section>
+        </div >
 
         // <Box sx={{ width: '100%', typography: 'body1' }} >
         //     <TabContext value={value} >
