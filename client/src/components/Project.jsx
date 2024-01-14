@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
@@ -23,13 +19,10 @@ const style = {
     padding: 0
 };
 
-function ProjectCard({ cardImg, images, cardTitle, cardDesc, projDesc, link }) {
-
+const Project = ({ cardImg, images, cardTitle, cardDesc, projDesc, link }) => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const [isHovered, setIsHovered] = useState(false);
-
     const handleOpenSite = () => {
         window.open(link, '_blank');
     };
@@ -54,62 +47,16 @@ function ProjectCard({ cardImg, images, cardTitle, cardDesc, projDesc, link }) {
         border: 'none',
         borderRadius: '5px',
     };
-
     return (
-        <Grid item xs={4}>
-            <Card
-                sx={{
-                    minWidth: 290,
-                    minHeight: 290,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    position: 'relative',
-                    overflow: 'hidden',
-                    transition: 'transform 0.3s ease-in-out',
-                    '&:hover': {
-                        transform: 'scale(1.05)',
-                    },
-                }}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}>
-                {!isHovered && <CardMedia
-                    component="img"
-                    image={cardImg}
-                    alt={`Image ${cardTitle}`}
-                    sx={{
-                        height: 290,
-                        transition: 'transform 0.3s ease-in-out',
-                        '&:hover': {
-                            transform: 'scale(1.05)',
-                        },
-                    }}
-                />}
-                {isHovered && (
-                    <>
-                        <CardContent>
-                            <Typography variant="h5" component="div">
-                                {cardTitle}
-                            </Typography>
-                            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                {cardDesc}
-                            </Typography>
-                        </CardContent>
-                        < CardActions
-                        >
-                            <Button
-                                size="small"
-                                variant="outlined"
-                                color="primary"
-                                onClick={handleOpen}
-                            >
-                                Learn More
-                            </Button>
-                        </CardActions>
-                    </>
-                )}
-            </Card>
+        <>
+            <div className='w-full shadow-xl bg-gray-100 flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
+                <img className='w-full mx-auto  mt-[2rem] bg-white' src={cardImg} alt="/" />
+                <h2 className='text-2xl font-bold text-center py-4'>{cardTitle}</h2>
+                <div className='text-center font-medium'>
+                    <p className='py-2 border-b mx-8'>{cardDesc}</p>
+                </div>
+                <button className='bg-[#c78eac] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3' onClick={handleOpen}>Learn More</button>
+            </div>
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -150,8 +97,8 @@ function ProjectCard({ cardImg, images, cardTitle, cardDesc, projDesc, link }) {
 
                 </Box>
             </Modal>
-        </Grid >
+        </>
     );
-}
+};
 
-export default ProjectCard;;
+export default Project;

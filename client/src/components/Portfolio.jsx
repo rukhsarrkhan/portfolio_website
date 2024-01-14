@@ -1,24 +1,12 @@
 import * as React from 'react';
 import { Link } from "react-scroll";
-import "../App.css";
 
-import Box from '@mui/material/Box';
-import Tab from '@mui/material/Tab';
-import TabContext from '@mui/lab/TabContext';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
 import PortfolioCard from "./PortfolioCard";
-import AboutCard from "./AboutCard";
 import About from "./About";
 import TimelineComp from './Timeline';
 import Contact from './Contact';
 
 export default function LabTabs() {
-    const [value, setValue] = React.useState('1');
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
 
     return (
         <div className="App">

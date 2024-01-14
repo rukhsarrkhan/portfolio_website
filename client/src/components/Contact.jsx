@@ -1,61 +1,50 @@
 import React from "react";
-import { Form, Input, TextArea, Button } from "semantic-ui-react";
 
 const Contact = () => {
-
-    const handleOnSubmit = (e) => {
-        // e.preventDefault();
-        // emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-        //   .then((result) => {
-        //     console.log(result.text);
-        //     Swal.fire({
-        //       icon: ‘success',
-        //       title: ‘Message Sent Successfully'
-        //     })
-        //   }, (error) => {
-        //     console.log(error.text);
-        //     Swal.fire({
-        //       icon: ‘error',
-        //       title: ‘Ooops, something went wrong',
-        //       text: error.text,
-        //     })
-        //   });
-        // e.target.reset()
-    };
-
     return (
-        <div className="App">
-            <Form onSubmit={handleOnSubmit}>
-                <Form.Field
-                    id='form-input-control-email'
-                    control={Input}
-                    label='Email'
-                    name='user_email'
-                    placeholder='Email…'
-                    required
-                    icon='mail'
-                    iconPosition='left'
-                />
-                <Form.Field
-                    id='form-input-control-last-name'
-                    control={Input}
-                    label='Name'
-                    name='user_name'
-                    placeholder='Name…'
-                    required
-                    icon='user circle'
-                    iconPosition='left'
-                />
-                <Form.Field
-                    id='form-textarea-control-opinion'
-                    control={TextArea}
-                    label='Message'
-                    name='user_message'
-                    placeholder='Message…'
-                    required
-                />
-                <Button type='submit' color='green'>Submit</Button>
-            </Form>
+        <div
+            name="contact"
+            className="w-full  bg-gradient-to-b from-black to-gray-800 py-[5rem] text-white"
+        >
+            <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
+                <div className="pb-8">
+                    <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+                        Contact
+                    </p>
+                    <p className="py-6">Submit the form below to get in touch with me</p>
+                </div>
+
+                <div className=" flex justify-center items-center">
+                    <form
+                        action="https://getform.io/f/61c99527-2b15-42cf-9b55-ad37d2f7daa6"
+                        method="POST"
+                        className=" flex flex-col w-full md:w-1/2"
+                    >
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Enter your name"
+                            className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                        />
+                        <input
+                            type="text"
+                            name="email"
+                            placeholder="Enter your email"
+                            className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                        />
+                        <textarea
+                            name="message"
+                            placeholder="Enter your message"
+                            rows="10"
+                            className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                        ></textarea>
+
+                        <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
+                            Let's talk
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     );
 };

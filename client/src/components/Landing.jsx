@@ -1,39 +1,38 @@
-import React from "react";
-import Menu from "./Menu";
-import LabTabs from "./Portfolio";
-// import Fade from "react-reveal/Fade";
-import { useCallback } from "react";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import React from 'react';
+import Typed from 'react-typed';
+import { FaArrowRight } from 'react-icons/fa';
 
 const Landing = () => {
-    const particlesInit = useCallback(async engine => {
-        await loadFull(engine);
-    }, []);
-
-    const particlesLoaded = useCallback(async container => {
-        await console.log(container);
-    }, []);
     return (
-        <>
-            <Particles
-                id="tsparticles"
-                init={particlesInit}
-                loaded={particlesLoaded}
-                options={{ "fullScreen": false, "background": { "image": " linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)" }, "particles": { "number": { "value": 10, "density": { "enable": true, "value_area": 600 } }, "color": { "value": "#ffffff" }, "shape": { "type": "square", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 } }, "opacity": { "value": 0.25, "random": true, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 29, "random": true, "anim": { "enable": false, "speed": 2, "size_min": 0.1, "sync": false } }, "line_linked": { "enable": false, "distance": 300, "color": "#ffffff", "opacity": 0, "width": 0 }, "move": { "enable": true, "speed": 0.5, "direction": "top", "straight": true, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 800, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 790, "size": 79, "duration": 2, "opacity": 0.8, "speed": 3 }, "repulse": { "distance": 400, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true }}
-                style={{ position: "absolute", width: "100%", height: "100%" }}
+        <div name="home" className='text-white h-screen w-full bg-gradient-to-b from-black via-black to-gray-800'>
+            <div className='max-w-screen-lg  w-full h-screen mx-auto text-center flex flex-col justify-center'>
+                {/* <p className='text-[#9F2B68] font-bold p-2'>
+                    GROWING WITH DATA ANALYTICS
+                </p> */}
+                <h1 className='md:text-6xl sm:text-6xl text-4xl font-bold md:py-6'>
+                    Hi, I'm Rukhsar Rashid Khan
+                </h1>
+                <div className='flex justify-center items-center'>
+                    <p className='md:text-5xl sm:text-4xl text-xl font-bold py-4'>
+                        A
+                    </p>
+                    <Typed
+                        className='md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 pl-2'
+                        strings={['Software Engineer', 'Full Stack Developer', 'Cyber Security Engineer']}
+                        typeSpeed={120}
+                        backSpeed={140}
+                        loop
+                    />
+                </div>
+                <p className='md:text-2xl text-xl font-bold text-gray-500'>A highly motivated and creative Software Developer with expertise in Cyber Secrurity and Frontend Development. Proven success in creating innovative solutions and delivering high-quality projects across domains.</p>
+                <div>
 
-            >
-                <section className="App" style={{ position: "relative", zIndex: 1 }}>
-                    <h1>Hi! This is Rukhsar Rashid Khan </h1>
-                    <blockquote>"Nice to meet you :)"</blockquote>
-                </section>
-            </Particles>
-
-            <LabTabs />
-        </>
-
-
+                    <button className='bg-[#9F2B68] w-[200px] rounded-md font-medium my-6 mx-auto py-3 flex items-center justify-center  text-black'>
+                        Resume <FaArrowRight className="ml-2" /> {/* Icon next to the text */}
+                    </button>
+                </div>
+            </div>
+        </div>
     );
 };
 

@@ -1,5 +1,4 @@
 import { Chrono } from "react-chrono";
-import IMG_6863 from '../IMG_6863.JPG';
 import WorkIcon from '@mui/icons-material/Work';
 import SchoolIcon from '@mui/icons-material/School';
 import StarIcon from '@mui/icons-material/Star';
