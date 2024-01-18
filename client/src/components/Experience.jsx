@@ -41,35 +41,35 @@ export default function Experience({ defaultColor }) {
                                     className={`${color} h-px w-8 translate-y-5 opacity-30`}
                                 ></div>
                             </div>
-                            <div className="border border-gray-600 rounded-lg px-8 py-4 bg-gray-800 w-full text-center z-10 sm:w-96">
+                            <div className="border border-white rounded-lg px-8 py-4 bg-pink-300 w-full text-center z-10 sm:w-96">
                                 <div className="text-xl font-medium">{element.title}</div>
-                                <div className="text-gray-300 mb-6 sm:mb-8 sm:text-xs">
+                                <div className="text-black mb-6 sm:mb-8 sm:text-xs">
                                     {element.location}
                                     <span className="sm:hidden">| {element.date}</span>
                                 </div>
                                 <div className="mb-4 text-left">{element.description}</div>
-                                <div className="flex flex-wrap mb-6 justify-center">
+                                {/* <div className="flex flex-wrap mb-6 justify-center">
                                     {element.tech.map((tech, index) => {
                                         return (
                                             <span
                                                 key={index}
-                                                className="bg-gray-900 rounded-xl px-2 py-1 text-sm m-1"
+                                                className="bg-white rounded-xl px-2 py-1 text-sm m-1"
                                             >
                                                 {tech}
                                             </span>
                                         );
                                     })}
-                                </div>
+                                </div> */}
                                 <img
                                     src={element.icon === "school" ? schoolIcon : workIcon}
                                     alt="icon"
                                     className={`${color} w-8 p-1 rounded-lg z-20 absolute left-4 top-4 sm:hidden`}
                                 />
-                                <a
+                                {/* <a
                                     className={`${color} text-gray-950 font-medium px-4 py-1 rounded-md mx-auto cursor-pointer hover:text-white`}
                                 >
                                     {element.buttonText}
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     );

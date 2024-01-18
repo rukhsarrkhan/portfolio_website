@@ -1,6 +1,7 @@
 import React from 'react';
 import Typed from 'react-typed';
 import { FaArrowRight } from 'react-icons/fa';
+import resume from '../assets/resume.pdf';
 
 const Landing = () => {
     return (
@@ -9,7 +10,7 @@ const Landing = () => {
                 {/* <p className='text-[#9F2B68] font-bold p-2'>
                     GROWING WITH DATA ANALYTICS
                 </p> */}
-                <h1 className='md:text-6xl sm:text-6xl text-4xl font-bold md:py-6'>
+                <h1 className='md:text-6xl sm:text-6xl text-4xl font-bold md:py-6 font-signature'>
                     Hi, I'm Rukhsar Rashid Khan
                 </h1>
                 <div className='flex justify-center items-center'>
@@ -26,10 +27,11 @@ const Landing = () => {
                 </div>
                 <p className='md:text-2xl text-xl font-bold text-gray-500'>A highly motivated and creative Software Developer with expertise in Cyber Secrurity and Frontend Development. Proven success in creating innovative solutions and delivering high-quality projects across domains.</p>
                 <div>
-
-                    <button className='bg-[#9F2B68] w-[200px] rounded-md font-medium my-6 mx-auto py-3 flex items-center justify-center  text-black'>
-                        Resume <FaArrowRight className="ml-2" /> {/* Icon next to the text */}
-                    </button>
+                    <a href={resume} target="_blank"rel="noreferrer"> 
+                        <button className='bg-[#9F2B68] w-[200px] rounded-md font-medium my-6 mx-auto py-3 flex items-center justify-center  text-black'>
+                            Resume <FaArrowRight className="ml-2" /> {/* Icon next to the text */}
+                        </button>
+                    </a>                  
                 </div>
             </div>
         </div>

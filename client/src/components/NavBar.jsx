@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { MdFace2 } from "react-icons/md";
 
 const NavBar = () => {
     const [nav, setNav] = useState(false);
@@ -29,9 +30,10 @@ const NavBar = () => {
     ];
 
     return (
-        <div className="flex justify-between items-center h-24  w-full mx-auto px-4 text-white bg-black fixed top-0 left-0 right-0 z-10">
+        <div className="flex justify-between items-center h-24  w-full mx-auto px-4 text-white bg-black fixed top-0 left-0 right-0 z-50">
             <div>
-                <h1 className="text-5xl font-signature ml-2">Rukhsar</h1>
+                <MdFace2 className="text-5xl ml-2 "/>
+                {/* <h1 className="text-5xl font-signature ml-2">Rukhsar</h1> */}
             </div>
 
             <ul className="hidden md:flex">
