@@ -7,14 +7,6 @@ export default function Experience({ defaultColor }) {
         <div name='experience' className="flex flex-col items-center py-[6rem] bg-gradient-to-b from-white to-gray-800 text-black">
             {
                 ExperienceElements.map((element) => {
-                    // const colors = [
-                    //     "bg-red-500",
-                    //     "bg-blue-500",
-                    //     "bg-yellow-500",
-                    //     "bg-purple-500",
-                    //     "bg-orange-500",
-                    // ];
-
                     const color = defaultColor || `bg-${element.color}-500`;
                     // const isSchool = element.icon === "school";
 
@@ -28,7 +20,7 @@ export default function Experience({ defaultColor }) {
                                 className={`${color} w-0.5 h-6 translate-x-80 translate-y-56 opacity-60 sm:hidden`}
                             ></div>
                             <div className="hidden items-start w-44 pt-0.5 relative sm:flex">
-                                <div className="w-4/5 text-gray-500">{element.date}</div>
+                                <div className="w-4/5 text-black">{element.date}</div>
                                 <div
                                     className={`${color} w-px h-full translate-x-5 translate-y-10 opacity-30`}
                                 ></div>
@@ -41,7 +33,7 @@ export default function Experience({ defaultColor }) {
                                     className={`${color} h-px w-8 translate-y-5 opacity-30`}
                                 ></div>
                             </div>
-                            <div className="border border-white rounded-lg px-8 py-4 bg-pink-300 w-full text-center z-10 sm:w-96">
+                            <div className="border border-white rounded-lg px-8 py-4 bg-pink-300 w-full text-center z-10 max-w-[700px]">
                                 <div className="text-xl font-medium">{element.title}</div>
                                 <div className="text-black mb-6 sm:mb-8 sm:text-xs">
                                     {element.location}

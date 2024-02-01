@@ -25,13 +25,13 @@ const Landing = () => {
                         loop
                     />
                 </div>
-                <p className='md:text-2xl text-xl font-bold text-gray-500'>A highly motivated and creative Software Developer with expertise in Cyber Secrurity and Frontend Development. Proven success in creating innovative solutions and delivering high-quality projects across domains.</p>
+                <p className='md:text-2xl text-xl font-bold text-gray-500'>A highly motivated and creative Software Developer with expertise in Cyber Security and Frontend Development. Proven success in creating innovative solutions and delivering high-quality projects across domains.</p>
                 <div>
-                    <a href={resume} target="_blank"rel="noreferrer"> 
+                    <a href={resume} target="_blank" rel="noreferrer">
                         <button className='bg-[#9F2B68] w-[200px] rounded-md font-medium my-6 mx-auto py-3 flex items-center justify-center  text-black'>
-                            Resume <FaArrowRight className="ml-2" /> {/* Icon next to the text */}
+                            Résumé <FaArrowRight className="ml-2" /> {/* Icon next to the text */}
                         </button>
-                    </a>                  
+                    </a>
                 </div>
             </div>
         </div>

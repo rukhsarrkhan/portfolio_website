@@ -1,52 +1,11 @@
-import React, { useState } from "react";
-import Box from '@mui/material/Box';
-import CardActions from '@mui/material/CardActions';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import React from "react";
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 800,
-    bgcolor: 'background.paper',
-    border: '1px solid #000',
-    boxShadow: 24,
-    p: 4,
-    padding: 0
-};
-
-const Project = ({ cardImg, images, cardTitle, cardDesc, projDesc, link }) => {
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+const Project = ({ cardImg, image, cardTitle, cardDesc, projDesc, link }) => {
+    const [showModal, setShowModal] = React.useState(false);
     const handleOpenSite = () => {
         window.open(link, '_blank');
     };
 
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    };
-
-    const handlePrev = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    };
-
-    const arrowStyle = {
-        cursor: 'pointer',
-        fontSize: '2rem',
-        position: 'absolute',
-        top: '67% ',
-        transform: 'translateY(-50%)',
-        backgroundColor: 'rgba(255, 255, 255, 0.5)',
-        border: 'none',
-        borderRadius: '5px',
-    };
     return (
         <>
             <div className='w-full shadow-xl bg-gray-100 flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
@@ -55,48 +14,60 @@ const Project = ({ cardImg, images, cardTitle, cardDesc, projDesc, link }) => {
                 <div className='text-center font-medium'>
                     <p className='py-2 border-b mx-8'>{cardDesc}</p>
                 </div>
-                <button className='bg-[#c78eac] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3' onClick={handleOpen}>Learn More</button>
+                <button className='bg-[#c78eac] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3' onClick={() => setShowModal(true)}>Learn More</button>
             </div>
-            <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-            >
-                <Box sx={style}>
-                    <Button onClick={handlePrev} style={{ ...arrowStyle, left: 0 }} disabled={currentIndex === 0}>
-                        &#9664;
-                    </Button>
-                    <img src={images[currentIndex]} alt={`${currentIndex + 1}`} style={{ width: 800, height: 400 }} />
-                    <Button onClick={handleNext} style={{ ...arrowStyle, right: 0 }} disabled={currentIndex === images.length - 1}>
-                        &#9654;
-                    </Button>
-                    <Typography id="modal-modal-title" variant="h6" component="h2"
-                        sx={{ fontFamily: 'Arial, sans-serif', fontWeight: 'bold', paddingLeft: 2 }}>
-                        {cardTitle}
-                    </Typography>
-                    <Typography id="modal-modal-description"
-                        sx={{ mt: 2, fontFamily: 'Arial, sans-serif', fontSize: '14px', color: '#555', textAlign: 'left', paddingLeft: 2, marginTop: 0 }}
+            {showModal ? (
+                <>
+                    <div
+                        className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
                     >
-                        {projDesc}
-                    </Typography>
-
-                    < CardActions
-                        sx={{ paddingLeft: 2, paddingBottom: 2 }}
-                    >
-                        <Button
-                            variant="outlined"
-                            size="small"
-                            color="primary"
-                            startIcon={<OpenInNewIcon />}
-                            onClick={handleOpenSite}
-                        >
-                            Visit Site
-                        </Button>
-                    </CardActions>
-
-                </Box>
-            </Modal>
+                        <div className="relative w-auto my-6 mx-auto max-w-4xl">
+                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                                <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+                                    <h3 className="text-3xl font-semibold">
+                                        {cardTitle}
+                                    </h3>
+                                    <button
+                                        className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                                        onClick={() => setShowModal(false)}
+                                    >
+                                        <span className="bg-transparent text-black opacity-700 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                                            ×
+                                        </span>
+                                    </button>
+                                </div>
+                                <img
+                                    alt="nature"
+                                    className="h-[24rem] w-full rounded-lg object-cover object-center p-4"
+                                    src={image}
+                                />
+                                <div className="relative p-6 flex-auto">
+                                    <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
+                                        {projDesc}
+                                    </p>
+                                </div>
+                                <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                                    <button
+                                        className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                        type="button"
+                                        onClick={() => setShowModal(false)}
+                                    >
+                                        Close
+                                    </button>
+                                    <button
+                                        className="bg-[#c78eac] text-white active:bg-[#ca629a] font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                        type="button"
+                                        onClick={() => handleOpenSite()}
+                                    >
+                                        View Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+                </>
+            ) : null}
         </>
     );
 };

@@ -15,8 +15,6 @@ function App() {
       <Projects />
       <Experience />
       <Contact />
-      {/* <Timeline /> */}
-      {/* <PortfolioCard /> */}
     </div>
   );
 }
