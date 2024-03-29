@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/portfolio_website/static/css/main.355c3e9f.css",
-    "main.js": "/portfolio_website/static/js/main.7b31da8f.js",
-    "static/media/profile_picture.png": "/portfolio_website/static/media/profile_picture.20cf3467f2c3ffe19017.png",
+    "main.css": "/portfolio_website/static/css/main.6a3338e3.css",
+    "main.js": "/portfolio_website/static/js/main.6c8c8863.js",
+    "static/media/profile_picture.png": "/portfolio_website/static/media/profile_picture.d5846858924125ef7bba.png",
     "static/media/drowsiness.png": "/portfolio_website/static/media/drowsiness.2deb02de96a2a073c18e.png",
     "static/media/songsearch.png": "/portfolio_website/static/media/songsearch.142e15a197f2105cbfb2.png",
     "static/media/portfolio.jpeg": "/portfolio_website/static/media/portfolio.be9f7bfb15bf61a90560.jpeg",
     "static/media/nirwana.jpeg": "/portfolio_website/static/media/nirwana.ed2747c5400f64fe128d.jpeg",
     "static/media/django_blogging.jpeg": "/portfolio_website/static/media/django_blogging.081da29cbcf59d252aa4.jpeg",
     "static/media/nurture_nest.jpeg": "/portfolio_website/static/media/nurture_nest.844c07470426def3ca02.jpeg",
-    "static/media/resume.pdf": "/portfolio_website/static/media/resume.78760fc662b9a3ebb62b.pdf",
     "static/media/cpu.jpeg": "/portfolio_website/static/media/cpu.9efed61cbd8e0cb4d9d3.jpeg",
+    "static/media/resume.pdf": "/portfolio_website/static/media/resume.3fa42e311cc718845c94.pdf",
     "static/media/blogging.png": "/portfolio_website/static/media/blogging.b9dfb718ec5bfb3ccc70.png",
     "static/media/school.svg": "/portfolio_website/static/media/school.a41655f6d5350015803153c7410cef6a.svg",
-    "static/media/work.svg": "/portfolio_website/static/media/work.3710b62484ed638074240e99317c6c60.svg",
     "index.html": "/portfolio_website/index.html",
-    "main.355c3e9f.css.map": "/portfolio_website/static/css/main.355c3e9f.css.map",
-    "main.7b31da8f.js.map": "/portfolio_website/static/js/main.7b31da8f.js.map"
+    "static/media/work.svg": "/portfolio_website/static/media/work.3710b62484ed638074240e99317c6c60.svg",
+    "main.6a3338e3.css.map": "/portfolio_website/static/css/main.6a3338e3.css.map",
+    "main.6c8c8863.js.map": "/portfolio_website/static/js/main.6c8c8863.js.map"
   },
   "entrypoints": [
-    "static/css/main.355c3e9f.css",
-    "static/js/main.7b31da8f.js"
+    "static/css/main.6a3338e3.css",
+    "static/js/main.6c8c8863.js"
   ]
 }
