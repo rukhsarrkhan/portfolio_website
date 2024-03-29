@@ -14,15 +14,15 @@ export default function Experience({ defaultColor }) {
 
                         <div key={element.id} className="flex m-4 relative">
                             <div
-                                className={`${color} w-0.5 h-6 translate-x-20 translate-y-56 opacity-60 sm:hidden`}
+                                className={`bg-black w-0.5 h-6 translate-x-20 translate-y-56 opacity-60 sm:hidden`}
                             ></div>
                             <div
-                                className={`${color} w-0.5 h-6 translate-x-80 translate-y-56 opacity-60 sm:hidden`}
+                                className={`bg-black w-0.5 h-6 translate-x-80 translate-y-56 opacity-60 sm:hidden`}
                             ></div>
-                            <div className="hidden items-start w-44 pt-0.5 relative sm:flex">
-                                <div className="w-4/5 text-black">{element.date}</div>
+                            <div className="hidden items-start w-64 pt-0.5 relative sm:flex">
+                                <div className="w-4/5 pt-2 text-black">{element.date}</div>
                                 <div
-                                    className={`${color} w-px h-full translate-x-5 translate-y-10 opacity-30`}
+                                    className={`bg-black w-px h-full translate-x-5 translate-y-10 opacity-30`}
                                 ></div>
                                 <img
                                     src={element.icon === "school" ? schoolIcon : workIcon}
@@ -30,16 +30,16 @@ export default function Experience({ defaultColor }) {
                                     className={`${color} w-10 p-1 rounded-lg z-20`}
                                 />
                                 <div
-                                    className={`${color} h-px w-8 translate-y-5 opacity-30`}
+                                    className={`bg-black h-px w-8 translate-y-5 opacity-30`}
                                 ></div>
                             </div>
-                            <div className="border border-white rounded-lg px-8 py-4 bg-pink-300 w-full text-center z-10 max-w-[700px]">
+                            <div className="border border-white rounded-lg px-8 py-4 bg-pink-300 text-center z-10 max-w-[700px] w-[700px] mx-auto">
                                 <div className="text-xl font-medium">{element.title}</div>
                                 <div className="text-black mb-6 sm:mb-8 sm:text-xs">
                                     {element.location}
                                     <span className="sm:hidden">| {element.date}</span>
                                 </div>
-                                <div className="mb-4 text-left">{element.description}</div>
+                                {/* <div className="mb-4 text-left">{element.description}</div> */}
                                 {/* <div className="flex flex-wrap mb-6 justify-center">
                                     {element.tech.map((tech, index) => {
                                         return (

@@ -10,26 +10,28 @@ const About = () => {
                     {/* <p className='text-[#9F2B68] font-bold '>DATA ANALYTICS DASHBOARD</p> */}
                     <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2 font-signature'>About me</h1>
                     <div className="space-y-4">
-                        <p className="text-justify font-cursive">
+                        <p className="text-justify font-style: italic">
                             Hello,
                         </p>
-                        <p className="text-justify font-cursive">
+                        <p className="text-justify font-style: italic">
                             Embracing the principle that "Knowledge is the pathway to new horizons,"
                             I navigate my career in software engineering with a relentless pursuit of innovation and learning.
                         </p>
-                        <p className="text-justify font-cursive">
+                        <p className="text-justify font-style: italic">
                             At ConnectWise, I spearheaded the development of innovative cybersecurity solutions, leveraging my
                             expertise in ReactJS, AngularJS, MySQL, Node.js, AWS, and my skills as a certified Ethical Hacker (CEH).
                             My work ensures products meet NIST compliance and exceed user expectations.
                         </p>
-                        <p className="text-justify font-cursive">
+                        <p className="text-justify font-style: italic">
                             Recently, I celebrated graduating with a Master of Science in Computer Science from Stevens Institute
                             of Technology, specializing in Software Development and Cyber Security. My passion for technology,
                             backed by a publication in pupil detection using machine learning, fuels my ambition to tackle
                             real-world problems with cutting-edge solutions.
                         </p>
-                        <p className="text-justify font-cursive">
+                        <p className="text-justify font-style: italic">
                             Best Regards,
+                        </p>
+                        <p className="text-justify font-style: italic">
                             Rukhsar Rashid Khan
                         </p>
                     </div>

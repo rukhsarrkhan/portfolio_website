@@ -2,14 +2,21 @@ import React from "react";
 
 const Project = ({ cardImg, image, cardTitle, cardDesc, projDesc, link }) => {
     const [showModal, setShowModal] = React.useState(false);
+
     const handleOpenSite = () => {
         window.open(link, '_blank');
+    };
+
+    const closeModal = (e) => {
+        if (e.target.id === "backdrop") {
+            setShowModal(false);
+        }
     };
 
     return (
         <>
             <div className='w-full shadow-xl bg-gray-100 flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
-                <img className='w-full mx-auto  mt-[2rem] bg-white' src={cardImg} alt="/" />
+                <img className='w-full h-60 mx-auto mt-8 bg-white object-cover' src={cardImg} alt="/" />
                 <h2 className='text-2xl font-bold text-center py-4'>{cardTitle}</h2>
                 <div className='text-center font-medium'>
                     <p className='py-2 border-b mx-8'>{cardDesc}</p>
@@ -20,6 +27,8 @@ const Project = ({ cardImg, image, cardTitle, cardDesc, projDesc, link }) => {
                 <>
                     <div
                         className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+                        onClick={closeModal}
+                        id="backdrop"
                     >
                         <div className="relative w-auto my-6 mx-auto max-w-4xl">
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
@@ -55,7 +64,7 @@ const Project = ({ cardImg, image, cardTitle, cardDesc, projDesc, link }) => {
                                         Close
                                     </button>
                                     <button
-                                        className="bg-[#c78eac] text-white active:bg-[#ca629a] font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                        className="bg-[#c78eac] text-white active:bg-[#958c91] hover:bg-[#ca629a] font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         type="button"
                                         onClick={() => handleOpenSite()}
                                     >

@@ -5,6 +5,7 @@ import { MdFace2 } from "react-icons/md";
 
 const NavBar = () => {
     const [nav, setNav] = useState(false);
+    const [activeNav, setActiveNav] = useState('');
 
     const links = [
         {
@@ -29,20 +30,35 @@ const NavBar = () => {
         },
     ];
 
+    const handleSetActive = (link) => {
+        console.log("link", link);
+        setActiveNav(link);
+        setNav(false);
+    };
+
     return (
         <div className="flex justify-between items-center h-24  w-full mx-auto px-4 text-white bg-black fixed top-0 left-0 right-0 z-50">
             <div>
-                <MdFace2 className="text-5xl ml-2 "/>
-                {/* <h1 className="text-5xl font-signature ml-2">Rukhsar</h1> */}
+                <Link to="home" smooth duration={500}>
+                    <MdFace2 className="text-5xl ml-2 cursor-pointer" />
+                </Link>
             </div>
 
             <ul className="hidden md:flex">
                 {links.map(({ id, link }) => (
                     <li
                         key={id}
-                        className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+                        className={`px-4 cursor-pointer capitalize font-medium hover:scale-105 duration-200 ${activeNav === link ? 'text-white' : 'text-gray-500'} `}
                     >
-                        <Link to={link} smooth duration={500}>
+                        <Link
+                            to={link}
+                            smooth
+                            duration={500}
+                            spy={true}
+                            exact="true"
+                            offset={-70}
+                            onSetActive={() => handleSetActive(link)}
+                        >
                             {link}
                         </Link>
                     </li>
@@ -61,13 +77,16 @@ const NavBar = () => {
                     {links.map(({ id, link }) => (
                         <li
                             key={id}
-                            className="px-4 cursor-pointer capitalize py-6 text-4xl"
+                            className={`px-4 cursor-pointer capitalize py-6 text-4xl ${activeNav === link ? 'text-white' : 'text-gray-500'}`}
                         >
                             <Link
-                                onClick={() => setNav(!nav)}
                                 to={link}
                                 smooth
                                 duration={500}
+                                spy={true}
+                                exact="true"
+                                offset={-70}
+                                onClick={() => handleSetActive(link)}
                             >
                                 {link}
                             </Link>
