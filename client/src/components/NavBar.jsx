@@ -37,7 +37,7 @@ const NavBar = () => {
     };
 
     return (
-        <div className="flex justify-between items-center h-24  w-full mx-auto px-4 text-white bg-black fixed top-0 left-0 right-0 z-50">
+        <div className="flex justify-between items-center h-20 md:h-24 w-full mx-auto px-4 text-white bg-black fixed top-0 left-0 right-0 z-50">
             <div>
                 <Link to="home" smooth duration={500}>
                     <MdFace2 className="text-5xl ml-2 cursor-pointer" />

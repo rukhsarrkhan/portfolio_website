@@ -4,7 +4,7 @@ import workIcon from "../assets/work.svg";
 
 export default function Experience({ defaultColor }) {
     return (
-        <div name='experience' className="flex flex-col items-center py-[6rem] bg-gradient-to-b from-white to-gray-800 text-black">
+        <div name='experience' className="flex flex-col items-center py-[6rem] bg-gradient-to-b from-white to-gray-800 text-black w-full overflow-hidden">
             {
                 ExperienceElements.map((element) => {
                     const color = defaultColor || `bg-${element.color}-500`;
@@ -12,10 +12,9 @@ export default function Experience({ defaultColor }) {
 
                     return (
 
-                        <div key={element.id} className="flex m-4 relative">
-                            <div
-                                className={`bg-black w-0.5 h-6 translate-x-20 translate-y-56 opacity-60 sm:hidden`}
-                            ></div>
+                        <div key={element.id} className="flex flex-col md:flex-row m-4 relative w-full max-w-[90%] md:max-w-[700px]">                            <div
+                            className={`bg-black w-0.5 h-6 translate-x-20 translate-y-56 opacity-60 sm:hidden`}
+                        ></div>
                             <div
                                 className={`bg-black w-0.5 h-6 translate-x-80 translate-y-56 opacity-60 sm:hidden`}
                             ></div>
@@ -33,8 +32,10 @@ export default function Experience({ defaultColor }) {
                                     className={`bg-black h-px w-8 translate-y-5 opacity-30`}
                                 ></div>
                             </div>
-                            <div className="border border-white rounded-lg px-8 py-4 bg-pink-300 text-center z-10 max-w-[700px] w-[700px] mx-auto">
-                                <div className="text-xl font-medium">{element.title}</div>
+                            <div className="border border-white rounded-lg px-4 py-4 bg-pink-300 text-center z-10 w-full md:w-[700px] mx-auto">
+                                <div className="text-lg md:text-xl font-medium">{element.title}</div>
+                                {/* <div className="text-sm md:text-base text-black mb-4 md:mb-6"> */}
+
                                 <div className="text-black mb-6 sm:mb-8 sm:text-xs">
                                     {element.location}
                                     <span className="sm:hidden">| {element.date}</span>
@@ -69,4 +70,4 @@ export default function Experience({ defaultColor }) {
             }
         </div >
     );
-}
+};
