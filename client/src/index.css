@@ -9,6 +9,8 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -31,6 +33,14 @@ body::after {
   background-attachment: scroll;
   pointer-events: none;
   z-index: -1;
+}
+
+/* For extra large screens */
+@media screen and (min-width: 2000px) {
+
+  body {
+    background-color: #487183; /* Adjust this color to match your background */
+  }
 }
 
 #root {
