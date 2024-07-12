@@ -6,7 +6,7 @@ import womanImage from '../assets/undraw_woman_ffrd.svg';
 
 const Landing = () => {
     return (
-        <div name="home" className='text-black min-h-screen w-full flex items-center justify-center'>
+        <div name="home" className='text-black min-h-screen w-full flex items-center justify-center py-28 md:py-0'>
 
             <div className='max-w-screen-lg w-full flex flex-col md:flex-row items-center justify-between text-center md:text-left '>
                 <div className='md:w-3/4'>
