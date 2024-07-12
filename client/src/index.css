@@ -5,11 +5,36 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #000300;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-body, html {
+body {
+  background-image: url('./assets/background.jpg');
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: auto;
   width: 100%;
   overflow-x: hidden;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  background-attachment: scroll;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

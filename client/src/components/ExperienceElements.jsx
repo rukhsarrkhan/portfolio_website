@@ -44,7 +44,7 @@ const timelineElements = [
     },
     {
         id: 4,
-        title: "Digital Technology Intern, Star Union Dai-ichi Life Insurance Company",
+        title: "Digital Technology Intern, Star Union Daiichi Life Insurance Company",
         location: "Mumbai, India",
         description: `Enhanced "YouMatter" Android app's Home Screen using Java, Kotlin and XML in Android Studio, resulting in a 25% boost
         in user engagement and improved navigation efficiency.`,
@@ -57,7 +57,7 @@ const timelineElements = [
     {
         id: 5,
         title: "Graduate Peer Leader, Stevens Institute of Technology",
-        location: "Hoboken, New Jersey",
+        location: "Hoboken, NJ",
         description: "Cultivated impactful peer-mentor bonds with over 10 mentees through sustained, regular communication.",
         buttonText: "Details",
         date: "August 2023 - Dec 2023",
@@ -68,7 +68,7 @@ const timelineElements = [
     {
         id: 6,
         title: "Master of Science, Computer Science (CGPA: 3.85/4)",
-        location: "Hoboken, New Jersey",
+        location: "Hoboken, NJ",
         description: "Relevant Courses: Web Programming, Algorithm Design & Implementation, Engineering Python, Cyber Security",
         buttonText: "Details",
         date: "August 2022 - Dec 2023",
@@ -78,8 +78,8 @@ const timelineElements = [
     },
     {
         id: 7,
-        title: "Software Engineer, Breathing AI",
-        location: "New York, New York",
+        title: "Software Engineer, breathing.ai",
+        location: "New York, NY",
         description: "Relevant Courses: Web Programming, Algorithm Design & Implementation, Engineering Python, Cyber Security",
         buttonText: "Details",
         date: "February 2024 - Current",
