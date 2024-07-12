@@ -5,23 +5,30 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+/* html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-}
+} */
 
 body {
-  background-image: url('./assets/background.jpg');
-  background-repeat: repeat-y;
-  background-position: center top;
-  background-size: auto;
-  width: 100%;
-  overflow-x: hidden;
+  background: radial-gradient(ellipse at center,
+    #a8bfcf 0%,
+    #97abb6 20%,
+    #819dab 40%,
+    #5e8497 60%,
+    #437083 80%,
+    #204f61 100%
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
+/* Optional: Add a subtle vignette effect */
 body::after {
   content: "";
   position: fixed;
@@ -29,22 +36,10 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background: inherit;
-  background-attachment: scroll;
+  background: radial-gradient(circle at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.03) 70%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
   pointer-events: none;
-  z-index: -1;
-}
-
-/* For extra large screens */
-@media screen and (min-width: 2000px) {
-
-  body {
-    background-color: #487183; /* Adjust this color to match your background */
-  }
-}
-
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
