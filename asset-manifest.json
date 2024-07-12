@@ -1,25 +1,29 @@
 {
   "files": {
-    "main.css": "/portfolio_website/static/css/main.d0ec110b.css",
-    "main.js": "/portfolio_website/static/js/main.afdff5cc.js",
-    "static/media/profile_picture.png": "/portfolio_website/static/media/profile_picture.d5846858924125ef7bba.png",
+    "main.css": "/portfolio_website/static/css/main.222ae2bd.css",
+    "main.js": "/portfolio_website/static/js/main.c80fe60f.js",
     "static/media/drowsiness.png": "/portfolio_website/static/media/drowsiness.2deb02de96a2a073c18e.png",
+    "static/media/background.jpg": "/portfolio_website/static/media/background.a0669f0b5bbe037c40ac.jpg",
     "static/media/songsearch.png": "/portfolio_website/static/media/songsearch.142e15a197f2105cbfb2.png",
     "static/media/portfolio.jpeg": "/portfolio_website/static/media/portfolio.be9f7bfb15bf61a90560.jpeg",
     "static/media/nirwana.jpeg": "/portfolio_website/static/media/nirwana.ed2747c5400f64fe128d.jpeg",
+    "static/media/profile_picture.png": "/portfolio_website/static/media/profile_picture.d4b6cdc23dc9e789ff32.png",
     "static/media/django_blogging.jpeg": "/portfolio_website/static/media/django_blogging.081da29cbcf59d252aa4.jpeg",
     "static/media/nurture_nest.jpeg": "/portfolio_website/static/media/nurture_nest.844c07470426def3ca02.jpeg",
     "static/media/cpu.jpeg": "/portfolio_website/static/media/cpu.9efed61cbd8e0cb4d9d3.jpeg",
-    "static/media/resume.pdf": "/portfolio_website/static/media/resume.3fa42e311cc718845c94.pdf",
+    "static/media/resume.pdf": "/portfolio_website/static/media/resume.435bfd89eb31ceccad8b.pdf",
+    "static/media/inventory.jpg": "/portfolio_website/static/media/inventory.e0d136bb2af3ebaa3d39.jpg",
+    "static/media/munchmentor.jpg": "/portfolio_website/static/media/munchmentor.3a168e54982df1f71f90.jpg",
     "static/media/blogging.png": "/portfolio_website/static/media/blogging.b9dfb718ec5bfb3ccc70.png",
+    "static/media/undraw_woman_ffrd.svg": "/portfolio_website/static/media/undraw_woman_ffrd.158db2d68b55bb0abf380fe3d6b263a4.svg",
     "static/media/school.svg": "/portfolio_website/static/media/school.a41655f6d5350015803153c7410cef6a.svg",
     "index.html": "/portfolio_website/index.html",
     "static/media/work.svg": "/portfolio_website/static/media/work.3710b62484ed638074240e99317c6c60.svg",
-    "main.d0ec110b.css.map": "/portfolio_website/static/css/main.d0ec110b.css.map",
-    "main.afdff5cc.js.map": "/portfolio_website/static/js/main.afdff5cc.js.map"
+    "main.222ae2bd.css.map": "/portfolio_website/static/css/main.222ae2bd.css.map",
+    "main.c80fe60f.js.map": "/portfolio_website/static/js/main.c80fe60f.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0ec110b.css",
-    "static/js/main.afdff5cc.js"
+    "static/css/main.222ae2bd.css",
+    "static/js/main.c80fe60f.js"
   ]
 }
